@@ -43,7 +43,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.projectKey=studentapp -Dsonar.host.url=http://43.201.115.47:9000 -Dsonar.login=1c03dfa37d9ca3815be1d37b1681fcd05b2d6d7b'
+                sh '/opt/maven/bin/mvn sonar:sonar -Dsonar.projectKey=studentapp -Dsonar.host.url=http://43.201.115.47:9000 -Dsonar.login=1c03dfa37d9ca3815be1d37b1681fcd05b2d6d7b'
             }
         }
                 stage('depoly') {
