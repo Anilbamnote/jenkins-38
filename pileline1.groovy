@@ -59,7 +59,7 @@ pipeline {
         }
                         stage('depoly') {
             steps {
-               echo "deploy success"
+               deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'deploy-id', path: '', url: 'http://13.125.59.132:8080/')], contextPath: '/', war: '**/*.war'
             }
         }
     }
